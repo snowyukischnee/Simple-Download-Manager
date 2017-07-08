@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Just A Download Manager</title>
+    <script> window.jQuery = window.$ = require('jquery'); </script>
+    <script src="../../public/js/bootstrap.min.js"></script>
+    <script src="../../public/js/bootstrap-table.min.js"></script>
+    <link rel="stylesheet" href="../../public/css/bootstrap-table.min.css">
+    <link rel="stylesheet" href="../../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="row close-window-wraper">
+        <div class="col-lg-12">
+            <span class="close-window">Close this window</span>
+        </div>
+    </div>
+    <div class="row error-wraper">
+        <div class="col-lg-12">
+            <span class="error">
+                Error while processing, automatically exit this window in 3 seconds...
+            </span>
+        </div>
+    </div>
+    <div class="container main-ctn">
+        <div class="URLwraper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <label>URL:</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <input type="text" class="refhref" disabled>
+                </div>
+            </div>
+        </div>
+        <div class="Sizewraper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <label>Size: </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <input type="text" class="fileSize" disabled>
+                    <span class="sizeType">Byte(s)</span>
+                </div>
+            </div>
+        </div>
+        <div class="controllerwraper">
+            <div class="Filenamewraper">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <label>Filename:</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <input type="text" class="filename" value="filename.dat">
+                    </div>
+                </div>
+            </div>
+            <div class="Threadwraper">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <label>Number of thread(s):</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <input type="number" class="threadnum" min="1" max="64" value="4">
+                    </div>
+                </div>
+            </div>
+            <div class="Chunksizewraper">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <label>Chunk size:</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <label class="radio-inline"><input type="radio" name="chunk" value="32" checked>32KBs</label>
+                        <label class="radio-inline"><input type="radio" name="chunk" value="64">64KBs</label>
+                        <label class="radio-inline"><input type="radio" name="chunk" value="128">128KBs</label>
+                        <label class="radio-inline"><input type="radio" name="chunk" value="256">256KBs</label>
+                        <label class="radio-inline"><input type="radio" name="chunk" value="512">512KBs</label>
+                        <label class="radio-inline"><input type="radio" name="chunk" value="1024">1024KBs</label>
+                        <label class="radio-inline"><input type="radio" name="chunk" value="-1">Custom</label>
+                    </div>
+                </div>
+            </div>
+            <div class="Customchunksizewraper">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <label>Custom chunk size(KB(s)):</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <input type="number" class="customchunk" min="32" max="16384" value="32">
+                    </div>
+                </div>
+            </div>
+            <div class="taskwraper">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <button type="button" class="btn btn-warning submit download">Download</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="taskviewer">
+            <table class="table taskview" data-height="150" data-row-style="rowStyle">
+                <thead>
+                    <tr>
+                        <th data-field="name">Part</th>
+                        <th data-field="query">Range</th>
+                        <th data-field="state">State</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="taskviewtoggle">
+            <div class="row">
+                <div class="col-lg-12">
+                    <label>Show/Hide Tasks Table (Should not use it because of there're so many task in the table then it maybe freeze)</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <button type="button" class="btn btn-warning submit viewtask">Show/Hide</button>
+                </div>
+            </div>
+        </div>
+        <div class="progress progresswraper">
+            <div class="progress-bar progress-bar-warning progress-bar-striped active downloadprogress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+            </div>
+        </div>
+        <div class="taskstate">
+            <p></p>
+        </div>
+    </div>
+</body>
+<script src="./index.js"></script>
+</html>

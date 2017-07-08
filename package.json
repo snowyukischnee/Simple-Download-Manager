@@ -1,0 +1,22 @@
+{
+  "name": "download_manager",
+  "version": "0.0.1",
+  "description": "Copy a part of Internet Download Manager",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tuannhse04791",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "async": "^2.1.5",
+    "bootstrap": "^3.3.7",
+    "electron": "^1.6.2",
+    "jquery": "^3.1.1",
+    "mkdirp": "^0.5.1",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "electron-packager": "^8.5.2"
+  }
+}

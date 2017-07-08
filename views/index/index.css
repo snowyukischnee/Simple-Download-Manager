@@ -1,0 +1,54 @@
+* {
+    font-family: "Lato Semibold" !important;
+}
+body {
+    background-color: lightskyblue;
+    overflow-x: hidden;
+    height: 100%;
+}
+.close-window-wraper {
+    -webkit-app-region: drag;
+}
+.close-window-wraper>div {
+    text-align: center;
+    -webkit-user-select: none;
+}
+.close-window, .minimize-window {
+    color: white;
+    bottom: 10%;
+    cursor: pointer;
+    font-size: 90%;
+    -webkit-app-region: no-drag;
+}
+.main-ctn {
+    left: 0;
+    right: 0;
+    position: absolute;
+    top: 35%;
+    text-align: center;
+}
+.main-ctn>div {
+    margin-bottom: 1em;
+}
+label {
+    color: white;
+    font-size: 110%;
+    -webkit-user-select: none;
+}
+.submit-link {
+    width: 60%;
+    font-size: 105%;
+}
+.proxy-link {
+    width: 40%;
+    font-size: 105%;
+}
+.submit {
+    border-radius: 0;
+    font-size: 115%;
+}
+.alert {
+    color: orangered;
+    font-size: 90%;
+    -webkit-user-select: none;
+}

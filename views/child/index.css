@@ -1,0 +1,86 @@
+* {
+    font-family: "Lato Semibold" !important;
+}
+body {
+    background-color: lightskyblue;
+    overflow-x: hidden;
+}
+.close-window-wraper {
+    -webkit-app-region: drag;
+}
+.close-window-wraper>div {
+    text-align: center;
+}
+.close-window {
+    color: white;
+    bottom: 10%;
+    cursor: pointer;
+    font-size: 90%;
+    -webkit-app-region: no-drag;
+    -webkit-user-select: none;
+}
+label {
+    color: white;
+    font-size: 95%;
+    -webkit-user-select: none;
+}
+.taskstate {
+    color: orangered;
+    font-size: 85%;
+    -webkit-user-select: none;
+}
+span {
+    -webkit-user-select: none;
+}
+.refhref {
+    font-size: 85%;
+    color: black;
+    width: 100%;
+}
+.fileSize {
+    font-size: 85%;
+    color: black;
+    width: 50%;
+}
+.filename, .threadnum, .customchunk {
+    font-size: 85%;
+    color: black;
+    width: 75%;
+}
+.sizeType {
+    font-size: 85%;
+    color: white;
+    width: 20px;
+}
+.error {
+    font-size: 110%;
+    color: orangered;
+}
+.error-wraper {
+    text-align: center;
+}
+.download {
+    border-radius: 0;
+    margin-top: 1em;
+}
+.main-ctn>div {
+    margin-bottom: 1em;
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar-thumb {
+    background-color: darkslategray;
+}
+::-webkit-scrollbar-button {
+    background-color: darkslategray;
+}
+.taskview {
+    color: black;
+    font-size: 80%;
+    background-color: white;
+    -webkit-user-select: none;
+}
