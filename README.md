@@ -6,3 +6,5 @@ This is my first project using ElectronJS
 npm install
 electron .
 ```
+## Author 
+tuannhse04791
